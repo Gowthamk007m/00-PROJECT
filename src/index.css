@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+.tech-stack-carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.tech-stack-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll 1s linear infinite;
+}
+
+.tech-stack-logo {
+  height: 3rem;
+  width: auto;
+  margin: 0 1rem;
+  flex-shrink: 0;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-150%);
+  }
+}
+
+/* Pause animation on hover if desired */
+.tech-stack-track:hover {
+  animation-play-state: paused;
+}
+:root {
+  font-family:"Poppins", serif ;
+  width: 100%;
+
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #000000;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a {
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: inherit;
+
+}
+a:hover {
+  color: #eb5c3a;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+} */
+
+
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #000000;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  
+}
