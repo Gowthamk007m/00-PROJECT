@@ -10,14 +10,10 @@ function App() {
         <div className=" ">
           <header className="relative mt-10 p-0">
             <div className="mx-auto flex flex-wrap items-center justify-between pt-4">
-              <div className="inline-block text-center leading-none text-[#1e3798]">
-                <h2 className="new-font text-[52px] font-normal tracking-wider">
-                  POKAK
-                </h2>
-                <h4 className="font-sans text-[10px] font-bold tracking-[1.1em]">
-                  TECHNOLOGIES
-                </h4>
-              </div>
+       <div className="inline-block text-center leading-none text-[#1e3798]">
+  <img src="/1.jpeg" alt="Pokak Technologies Logo" className="h-[60px] object-contain mx-auto" />
+</div>
+
 
               <div class="hidden w-full items-center justify-between md:flex md:w-auto">
                 <ul class="text-md mt-4 flex flex-col rounded-lg border border-gray-100 bg-[#192434] p-4 font-medium md:mt-0 md:flex-row md:space-x-6 md:rounded-3xl md:p-2 md:pr-6 md:pl-6">
@@ -138,10 +134,11 @@ function App() {
               </div>
 
               <div className="col-span-2 col-start-3">
-                <form className="mx-auto max-w-2xl rounded-2xl bg-radial-[at_50%_75%] from-[#254cd1] to-[#9846ff] to-180% text-white">
+                <form className="mx-auto max-w-2xl rounded-2xl bg-radial-[at_50%_50%] from-[#2A4DD0] to-[#6C63FF] to-90% text-white">
                   <div className="text-md mb-2 -ml-2 w-fit rounded-br-2xl bg-[#f4f7fe] p-5 text-black">
                     Send Us a Message
                   </div>
+           
 
                   <div className="p-15">
                     <div className="grid md:grid-cols-2 md:gap-6">
@@ -257,6 +254,7 @@ function App() {
                       </button>
                     </div>
                   </div>
+                  
                 </form>
               </div>
             </div>
@@ -264,7 +262,7 @@ function App() {
         </div>
       </div>
 
-      <footer className="bg-[linear-gradient(to_bottom_right,_#9845ff_0%,_#254cd1_20%,_#254cd1_90%,_#9845ff_100%)] px-12 py-8 leading-10 text-white">
+      <footer className="bg-[linear-gradient(to_bottom_right,_#6C63FF_4%,_#2A4DD0_20%,_#6C63FF_90%,_#9845ff_100%)] px-12 py-8 leading-10 text-white">
         <div className="mx-auto flex w-6/7 justify-between">
           <div className="w-2/5">
             <h2 className="new-font mb-1 text-[72px] font-bold">POKAK</h2>
