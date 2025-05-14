@@ -1,42 +1,36 @@
-import './Footer.css';
+import React from 'react';
 
-export default function Footer() {
+const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-logo">
-        <img src="https://pokaktech.com/images/logo.png" alt="Pokak Logo" />
-        <p>Where Ideas Meet Innovation.</p>
-      </div>
-
-      <div className="footer-columns">
-        <div className="footer-column">
-          <h4><strong>Follow Us </strong></h4>
-          <a href="#">LinkedIn ↗</a>
-          <a href="#">Instagram ↗</a>
-          <a href="#">Whatsapp ↗</a>
-          <a href="#">Facebook ↗</a>
+    <footer className="bg-gradient-to-br from-blue-600 via-blue-700 to-purple-700 px-0 md:px-0 py-8 pt-10 h-90 leading-12 text-white ">
+      <div className="flex flex-col md:flex-row justify-between mx-auto w-full container px-15 ">
+        <div className="mb-6 md:mb-0 w-full md:w-2/5">
+          <img src="/4.png" alt="Logo" className="h-[60px] mx-auto md:mx-0" />
+          <p className="mt-5 text-xl">Where Ideas Meet Innovation.</p>
         </div>
-
-        <div className="footer-column">
-          <h4><strong>Sitemap </strong></h4>
-          <a href="#">Home ↗</a>
-          <a href="#">About Us ↗</a>
-          <a href="#">Services ↗</a>
-          <a href="#">Projects ↗</a>
-          <a href="#">Odoo ERP ↗</a>
-          <a href="#">Careers ↗</a>
+        <div>
+          <h4 className="text-2xl font-semibold mb-2">Follow Us</h4>
+          <p>LinkedIn</p>
+          <p>Instagram</p>
+          <p>Facebook</p>
         </div>
-
-        <div className="footer-column">
-          <h4><strong>Get in touch</strong></h4>
+        <div>
+          <h4 className="text-2xl font-semibold mb-2">Sitemap</h4>
+          <p>Home</p>
+          <p>About Us</p>
+          <p>Services</p>
+          <p>Projects</p>
+        </div>
+        <div>
+          <h4 className="text-2xl font-semibold mb-2">Contact</h4>
           <p>Pokak Technologies PVT LTD</p>
-          <p>Suit No.414, Valamkottil Tower</p>
-          <p>Kakkanad, Kochi–682021</p>
-          <p><a href="tel:+919656033444">+91 9656 033 444</a></p>
-          <p><a href="mailto:info@pokaktech.com">info@pokaktech.com ↗</a></p>
-          <p><a href="mailto:pokaktech@gmail.com">pokaktech@gmail.com ↗</a></p>
+          <p>Valamkottil Tower, Kakkanad, Kochi-682021</p>
+          <p>+91 9656 033 444</p>
+          <p>info@pokaktech.com</p>
         </div>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

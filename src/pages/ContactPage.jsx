@@ -2,136 +2,16 @@ import React, { useState } from 'react';
 import "./ContactPage.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBarsStaggered, faXmark } from '@fortawesome/free-solid-svg-icons';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 function App() {
-  // State for mobile menu
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Navigation data
-  const navItems = [
-    { name: 'Home', link: '/', current: true },
-    { name: 'About Us', link: '/about', current: false },
-    { name: 'Services', link: '/services', current: false },
-    { name: 'Industries', link: '/industries', current: false },
-    { name: 'Careers', link: '/careers', current: false },
-    { name: 'Projects', link: '/projects', current: false },
-  ];
-
-  // Toggle menu function
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   return (
     <div>
-      <div className="mx-auto w-5/6">
-        <div className="">
-          <header className="relative mt-10 p-0">
-            <div className="mx-auto flex flex-wrap items-center justify-between pt-4">
-              <div className="inline-block text-center leading-none text-[#1e3798]">
-                <img src="/3.png" alt="Pokak Technologies Logo" className="h-[60px] object-contain mx-auto" />
-              </div>
-
-              {/* Desktop Navigation */}
-              <div className="hidden w-full items-center justify-between md:flex md:w-auto">
-                <ul className="text-md mt-4 flex flex-col rounded-lg border border-gray-100 bg-[#192434] p-4 font-medium md:mt-0 md:flex-row md:space-x-6 md:rounded-3xl md:p-2 md:pr-6 md:pl-6">
-                  {navItems.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.link}
-                        className={`block rounded-sm px-3 py-2 ${
-                          item.current
-                            ? 'text-white md:bg-transparent md:p-0 md:text-blue-700 md:dark:text-blue-500'
-                            : 'text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:dark:hover:text-blue-500'
-                        }`}
-                        aria-current={item.current ? 'page' : undefined}
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="flex justify-around gap-1.5">
-                <button className="rounded bg-[linear-gradient(to_bottom_right,_#9845ff_0%,_#254cd1_20%,_#254cd1_90%,_#9845ff_100%)] p-2 pr-4 pl-4 text-white">
-                  Contact
-                </button>
-
-                <button 
-                  className="rounded "
-                  onClick={toggleMenu}
-                  aria-expanded={isMenuOpen}
-                  aria-label="Toggle navigation menu"
-                >
-                  <FontAwesomeIcon
-                    icon={isMenuOpen ? faXmark : faBarsStaggered}
-                    size="2x"
-                    className="bg-black pr-3 pl-3 rounded pt-1 pb-1 text-white"
-                  />
-                </button>
-              </div>
-            </div>
-
-            {/* Mobile Navigation Menu */}
-            {isMenuOpen && (
-              <div className="fixed inset-0 z-50 flex md:hidden">
-                <div 
-                  className="fixed inset-0 bg-black bg-opacity-50"
-                  onClick={toggleMenu}
-                  aria-hidden="true"
-                ></div>
-                <div className="relative w-full max-w-xs bg-[#192434] p-6 flex flex-col h-full">
-                  <div className="flex items-center justify-between mb-8">
-                    <div className="inline-block text-center leading-none">
-                      <img src="/3.png" alt="Pokak Technologies Logo" className="h-[40px] object-contain" />
-                    </div>
-                    <button
-                      onClick={toggleMenu}
-                      className="rounded-full p-2 text-white hover:bg-gray-700"
-                    >
-                      <FontAwesomeIcon icon={faXmark} size="lg" />
-                    </button>
-                  </div>
-                  <ul className="space-y-4 text-white text-lg">
-                    {navItems.map((item) => (
-                      <li key={item.name}>
-                        <a
-                          href={item.link}
-                          className={`block py-2 px-4 rounded-md ${
-                            item.current
-                              ? 'bg-blue-700 text-white'
-                              : 'text-white hover:bg-gray-700'
-                          }`}
-                          onClick={toggleMenu}
-                        >
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                    <li>
-                      <a
-                        href="#"
-                        className="block py-2 px-4 rounded-md bg-gradient-to-r from-purple-600 to-blue-600 text-white"
-                        onClick={toggleMenu}
-                      >
-                        Contact
-                      </a>
-                    </li>
-                  </ul>
-                  <div className="mt-auto pt-6 border-t border-gray-700">
-                    <p className="text-gray-300 text-sm">
-                      +91 9656 033 444
-                    </p>
-                    <p className="text-gray-300 text-sm">
-                      info@pokaktech.com
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )}
-          </header>
-
+      <div className="mx-auto  container px-15">
+      <Navbar/>
           <main>
             <div className="mt-30 grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="md:col-span-2">
@@ -166,7 +46,7 @@ function App() {
                       allowFullScreen=""
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      className="mt-4 h-68 w-full md:w-140 rounded border-0 shadow-lg"
+                      className="mt-4 h-96 w-full md:w-140 rounded border-0 shadow-lg"
                     />
                   </div>
                   <div className="mt-4 md:mt-0">
@@ -305,49 +185,8 @@ function App() {
               </div>
             </div>
           </main>
-        </div>
       </div>
-
-      <footer className="bg-[linear-gradient(to_bottom_right,_#6C63FF_4%,_#2A4DD0_20%,_#6C63FF_90%,_#9845ff_100%)] px-6 md:px-12 py-8 leading-10 text-white">
-        <div className="mx-auto flex flex-col md:flex-row w-full md:w-6/7 justify-between">
-          <div className="w-full md:w-2/5 mb-6 md:mb-0">
-            <div className="inline-block text-center leading-none text-[#1e3798]">
-              <img src="/4.png" alt="Pokak Technologies Logo" className="h-[60px] object-contain mx-auto md:mx-0" />
-            </div>
-            <p className="mt-5 mb-1 text-2xl font-semibold">
-              Where Ideas Meet Innovation.
-            </p>
-          </div>
-          <div className="w-full md:w-1/5 mb-6 md:mb-0">
-            <h4 className="mb-2 text-3xl font-semibold">Follow Us</h4>
-            <p className="mb-1">LinkedIn</p>
-            <p className="mb-1">Instagram</p>
-            <p className="mb-1">WhatsApp</p>
-            <p className="mb-1">Facebook</p>
-          </div>
-          <div className="w-full md:w-1/5 mb-6 md:mb-0">
-            <h4 className="mb-2 text-3xl font-semibold">Sitemap</h4>
-            <p className="mb-1">Home</p>
-            <p className="mb-1">About Us</p>
-            <p className="mb-1">Services</p>
-            <p className="mb-1">Projects</p>
-            <p className="mb-1">Odoo ERP</p>
-            <p className="mb-1">Careers</p>
-          </div>
-          <div className="w-full md:w-1/5">
-            <h4 className="mb-4 text-3xl font-semibold">Get in touch</h4>
-            <p className="mb-1 leading-5">
-              Pokak Technologies PVT LTD <br />
-              Suit No.414 Valamkottil Tower <br />
-              Kakkanad, Kochi-682021 <br />
-            </p>
-
-            <p className="mb-1">+91 9656 033 444</p>
-            <p className="mb-1">info@pokaktech.com</p>
-            <p className="mb-1">pokaktech@gmail.com</p>
-          </div>
-        </div>
-      </footer>
+          <Footer/>
     </div>
   );
 }

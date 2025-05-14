@@ -1,38 +1,38 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import TopBar from '../components/TopBar';
 import Footer from '../components/Footer';
-import './Home.css'; // You can create this for specific styles
+import Navbar from '../components/Navbar-Home';
+import CircularContact from '../components/CircularContact';
 
 const Home = () => {
   return (
-    <>
-      <TopBar />
-      <div className="nav-bar-background">
-        <nav className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/about">About Us</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/industries">Industries</Link>
-          <Link to="/careers">Careers</Link>
-          <Link to="/projects">Projects</Link>
-          <Link to="/contact">
-            <button className="contact-button">Contact</button>
-          </Link>
-        </nav>
+    <div className="flex flex-col min-h-screen">
+      {/* Section with background image */}
+      <div
+        className="bg-[url('/img/home.png')] bg-cover bg-center bg-no-repeat text-white"
+      >
+        <Navbar />
+
+        <main className="flex flex-col items-center justify-center h-[700px] text-center px-4 md:px-8 ">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">Empowering Businesses</h1>
+          <h1 className="text-3xl md:text-7xl tracking-[1px] mb-7 ">with Scalable Tech Solutions</h1>
+
+          <p className='w-2/5 text-lg leading-6 mt-6 mb-6'>From custom web platforms to complete ERP systems, we craft innovative digital experiences</p>
+
+          <button className='p-2 border rounded mt-3 '>
+            Explore our services
+          </button>
+
+<div className=" pr-10 absolute right-4 bottom-0">
+  <CircularContact />
+</div>
+
+        </main>
       </div>
 
-      {/* Your main home content here */}
-      <section className="home-hero">
-        <h1>Empowering Businesses with <strong>Scalable Tech Solutions</strong></h1>
-        <p>From custom web platforms to complete ERP systems, we craft innovative digital experiences.</p>
-        <button className="cta-button">Explore Our Services</button>
-      </section>
-
+      {/* Footer outside background image */}
       <Footer />
-    </>
+    </div>
   );
 };
 
 export default Home;
-
