@@ -1,0 +1,202 @@
+/* Top black bar */
+.top-black-bar {
+  background-color: #000;
+  height: 10px;
+  width: 100%;
+}
+
+/* Header container */
+.contact-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #f7f9ff;
+}
+
+/* Logo */
+.logo {
+  height: 50px;
+}
+
+/* Navigation bar */
+.nav-bar-background {
+  background-color: #111827;
+  border-radius: 30px;
+  padding: 10px 25px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #999;
+}
+
+/* Contact button */
+.contact-button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.contact-button:hover {
+  background-color: #2563eb;
+}
+
+/* Header right section */
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: inline-block;
+  font-size: 20px;
+  padding: 10px;
+  background-color: #111827;
+  color: white;
+  border-radius: 3px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Mobile side menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #111827;
+  color: white;
+  width: 250px;
+  height: 100vh;
+  padding: 20px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.side-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.side-menu .close-btn {
+  font-size: 28px;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+/* Responsive navigation */
+@media (max-width: 768px) {
+  .nav-bar-background {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .contact-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .projects-section {
+    padding: 40px 20px;
+  }
+}
+
+/* ========== NEW: Project Mockup Section ========== */
+
+.project-mockup-section {
+  background-color: #f7f9ff;
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.project-mockup-section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1f2937;
+  line-height: 1.4;
+  margin-bottom: 40px;
+}
+
+.project-mockup-section h2 .highlight {
+  color: #1f2937;
+  text-decoration: underline;
+  text-decoration-color: #3b82f6;
+}
+
+.mockup-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.laptop-background {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Overlay image wrapper (perfectly matches screen area of laptop) */
+.screen-wrapper {
+  position: absolute;
+  top: 18.8%;
+  left: 23.1%;
+  width: 53.8%;
+  height: 54.6%;
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.screen-overlay {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Top left project label */
+.mockup-label {
+  position: absolute;
+  top: -30px;
+  left: 20px;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+}
+
+.mockup-logo {
+  height: 24px;
+}
