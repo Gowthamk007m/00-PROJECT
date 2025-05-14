@@ -9,12 +9,12 @@ function App() {
 
   // Navigation data
   const navItems = [
-    { name: 'Home', link: '#', current: true },
-    { name: 'About Us', link: '#', current: false },
-    { name: 'Services', link: '#', current: false },
-    { name: 'Industries', link: '#', current: false },
-    { name: 'Careers', link: '#', current: false },
-    { name: 'Projects', link: '#', current: false },
+    { name: 'Home', link: '/', current: true },
+    { name: 'About Us', link: '/about', current: false },
+    { name: 'Services', link: '/services', current: false },
+    { name: 'Industries', link: '/industries', current: false },
+    { name: 'Careers', link: '/careers', current: false },
+    { name: 'Projects', link: '/projects', current: false },
   ];
 
   // Toggle menu function
